@@ -13,12 +13,19 @@ public class Bank {
     }
 
     public void setScore(double score) {
-        this.score += score;
-        System.out.println("Счет пополнен на сумму " + score);
-    }
+
+            this.score += score;
+            System.out.println("Счет пополнен на сумму " + score);
+        }
 
     public void takeScore(double score){
-        this.score -= score;
-        System.out.println("Снятие наличных " + score);
+        if (this.getScore() >= score) {
+            this.score -= score;
+            System.out.println("Снятие наличных " + score);
+        }
+        else {
+            System.out.println("На счету нехватает средств!");
+        }
+
     }
 }

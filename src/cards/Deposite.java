@@ -4,7 +4,7 @@ import java.util.Calendar;
 
 public class Deposite extends Bank {
 
-    Calendar calendar = Calendar.getInstance();
+    private Calendar calendar = Calendar.getInstance();
 
     private int mounth;
 
@@ -20,14 +20,12 @@ public class Deposite extends Bank {
 
     @Override
     public void takeScore(double score) {
-        if(this.mounth != calendar.get(Calendar.MONTH)) {
+        if (this.mounth != calendar.get(Calendar.MONTH)) {
             super.takeScore(score);
-        }
-        else{
+        } else {
             System.out.println("Вы не можете снять деньги в этом месяце");
         }
-
     }
-
-
 }
+
+

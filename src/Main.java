@@ -9,6 +9,8 @@ public class Main {
         System.out.println("Остаток на банковском счете " + bank.getScore());
         bank.takeScore(4256);
         System.out.println("Остаток на банковском счете " + bank.getScore() + "\n");
+        bank.takeScore(4256);
+        System.out.println("Остаток на банковском счете " + bank.getScore() + "\n");
 
         Deposite deposite = new Deposite(10000);
         deposite.setScore(5000);
@@ -20,7 +22,9 @@ public class Main {
         creditCard.setScore(5000);
         System.out.println("Остаток на карте " + creditCard.getScore());
         creditCard.takeScore(2000);
-        System.out.println("Остаток на карте " + creditCard.getScore());
+        System.out.println("Остаток на карте " + creditCard.getScore() + "\n");
+        creditCard.takeScore(250000);
+        System.out.println("Остаток на карте " + creditCard.getScore() + "\n");
 
 
     }
